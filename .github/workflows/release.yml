@@ -30,13 +30,12 @@ jobs:
       # Download SourceGuard
       - name: Download SourceGuard
         run: |
-          curl -o sourceguard-cli --location https://storage.googleapis.com/release-cli-prod/v0.0.104/linux/amd64/sourceguard-cli
+          curl -o sourceguard-cli --location https://storage.googleapis.com/release-cli-prod/v0.0.106/linux/amd64/sourceguard-cli
           chmod u+x ./sourceguard-cli
       # Run sourceguard-cli
       - name: Run sourceguard-cli
-         run: |
-           ./sourceguard-cli -src ./
-
+        run: |
+          ./sourceguard-cli -src ./
   Build:
     needs: Test
     runs-on: ubuntu-latest
